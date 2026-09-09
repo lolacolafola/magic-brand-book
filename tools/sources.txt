@@ -1,0 +1,170 @@
+# Magic brand book: every factual claim and where it came from.
+# Format:  claim | source
+# The claims check fails on anything in the book that has no line here.
+# "no source, needs adoption" is an honest answer. An empty line is not.
+
+# --- document metadata ---
+4.8                | this document's own version
+9                  | date of this version, 9 September 2026
+2026               | date
+2025               | date of the branding studio's brand platform
+
+# --- fan archetypes: percentages ---
+55                 | published participation research on online community splits. Stated as such in the book. Not Magic data
+30                 | same
+15                 | same
+Six archetypes     | Magic-Personas deck, June 2026, Laura's own work
+Three buyers       | same deck, part two, three talent personas
+
+# --- design file, verifiable by opening it ---
+Eight colours      | the Figma design file, components A to H
+800                | Gilroy ExtraBold, weight in the design file
+700                | Gilroy Bold, weight in the design file
+600                | Gilroy SemiBold, weight in the design file
+500                | Gilroy Medium, weight in the design file
+9px                | navigation label size measured in the design file
+three weights      | the design file uses ExtraBold, Bold, SemiBold and Medium
+one warm           | Sand is the only warm value in the eight. Countable
+six cool           | the other six of the eight. Countable
+outside the eight  | follows from the palette being eight colours
+
+# --- app, verifiable by opening it ---
+1                  | tab positions in the current app tab bar
+2                  | same
+4                  | same
+5                  | same
+three products     | the September 2026 brand platform names Companion, Fanverses, Rewards
+Two glows          | sampled from the app splash screen
+one corner         | same
+
+# --- brand platform, September 2026 ---
+Four traits        | Real, Youthful, Empowering, Playful. 2025 brand platform, carried forward. PROVISIONAL
+One personality    | structural, follows from the four traits
+two registers      | fan and industry. Derived from the audiences table
+two audiences      | fan-facing and artist-facing. The brand platform addresses fans only
+one brand          | structural
+two full           | LIVE IT. FOR REAL. has two full stops. Countable
+two complete       | follows from the punctuation
+One exception      | the vision statement. Named in the book
+four pages         | the FR brand platform sets the tagline across four pages. Verifiable in that deck
+four different     | four French renderings of the vision line in that deck. Verifiable
+One approved       | instruction, not a claim
+
+# --- adopted from an external brand book. NOT YET ADOPTED BY MAGIC ---
+80                 | external reference, colour proportions. NEEDS MAGIC ADOPTION
+2x                 | external reference, type ratio, Informative. NEEDS MAGIC ADOPTION
+4x                 | same. NEEDS MAGIC ADOPTION
+6x                 | same, Expressive. NEEDS MAGIC ADOPTION
+three settings     | Recessive, Informative, Expressive. External reference. NEEDS MAGIC ADOPTION
+Three palette      | maximum three colours per surface. External reference. NEEDS MAGIC ADOPTION
+One colour         | one colour leads. External reference. NEEDS MAGIC ADOPTION
+One decision       | the ground is chosen first. Follows from the proportions
+One accent         | follows from the proportions
+one surface        | follows from the proportions
+
+# --- written by Claude, no external source. ADOPTION NEEDED ---
+twelve and         | "every sentence between twelve and eighteen words" as an AI tell. Claude's observation, not measured
+Three lands        | "three items reads as machine cadence". Claude's observation
+One use            | one Cyan accent per screen. Claude's proposal. NEEDS ADOPTION
+one job            | Sand carries one idea. Claude's proposal. NEEDS ADOPTION
+one asset          | never mix Gilroy and Outfit. Claude's proposal. NEEDS ADOPTION
+one export         | the localisation file ask. A request, not a claim
+Two rules          | count of the binding copy rules. Countable in the book
+Two standing       | count of the standing rules. Countable in the book
+one does           | "the file says nothing about what each colour does". Verifiable in the design file
+
+# --- structural, self-verifying by reading the sentence ---
+one wins           | precedence statement
+one carries        | frame usage rule
+One app            | value proposition line from the brand platform
+one built          | a Fanverse can be built around anything. Laura, 9 Sep
+one can            | same
+one passion        | same
+One world          | Fanverse definition
+one artist         | same
+one person         | product copy rule, second person
+one small          | Drifter instruction
+one that           | "the one that decides the brand". Claude's argument from the archetype split
+one every          | same
+one manager        | Rising Independent has one manager. From the personas deck
+one common         | REMOVED 9 Sep. Was an unverified claim about French
+nine words         | REMOVED 9 Sep. Did not survive counting
+One candidate      | en vrai put to the French gate. Flagged as the gate's call
+is called Magic Companion Magic Guide appears in | Product Glossary names Magic Guide, brand platform names Magic Companion. Both current
+
+# --- attributions already stated in the text ---
+from the French voice gate | standing rule
+ stated$| stated
+published participation research on how any online com | stated
+from the drive-bys, and controlling what each group g | not a source claim, phrase match
+from the 2025 brand platform | stated
+From the Product Glossary | stated
+from the current app design, September 2026 | stated
+from the design file, which is slower and misses ever | not a source claim, phrase match
+from the translated brand platform Newly written Fren | stated
+three different    | the FR brand platform sets the tagline three ways. Verifiable in that deck
+eight The          | phrase match on "outside the eight". Covered by the eight-colour palette
+two exceptions     | the vision statement and the DNA statement. Named in the book
+
+# --- LIVE IT section, added 9 Sep ---
+Two words           | LIVE IT is two words. Countable
+two words           | the mission compressed. Verifiable against the mission line
+Two halves          | LIVE IT and FOR REAL. Countable
+
+# --- Writing it / examples, added 9 Sep ---
+Four pieces        | count of worked examples in the section. Countable
+2.4                | illustrative figure inside an example, marked as an example
+50                 | illustrative figure inside an example
+18                 | illustrative time inside an example
+Fifty of           | illustrative quantity inside an example
+one to nine        | standard number style convention. Claude's proposal. NEEDS ADOPTION
+One per            | one exclamation mark per piece. Laura, 9 Sep
+three minutes      | illustrative figure inside an example
+six competitors    | Magic_Growth_Estimate_EOY2026.md, on "own your fans" as table stakes
+nine in            | phrase match inside the number-style rule
+one place          | phrase inside a worked example
+from the platforms | phrase inside a worked example, marked as what to avoid
+00                 | minutes in the illustrative time 18:00 inside an example
+one fan            | second person addresses one person. Existing product copy rule
+Three rules        | count of the standing rules. Countable in the section
+
+# --- Where the energy comes from, added 9 Sep ---
+Fifty headbands    | illustrative object inside an example
+four-word          | illustrative sentence length in a style rule
+one person you     | second person, addresses one fan. Existing rule
+from The rules above are all prohibitions, and copy w | phrase match, not a source claim
+3                  | illustrative duration inside an example
+3 minutes          | illustrative duration inside an example
+50 of              | illustrative quantity inside an example
+.*| count. Refers to the single emoji rule replaced 9 Sep
+One or             | one or two emoji per push. Laura, 9 Sep
+One emoji          | one emoji reused everywhere becomes a tic. Same logic as the tagline repetition rule
+6                  | Expressive heading ratio, 6x or more. From an external type system. NEEDS MAGIC ADOPTION
+one fails          | phrase match on the panel heading "Why this one fails". Not a claim
+
+# --- AI positioning rule, added 9 Sep ---
+one claim          | "own your fans" as the claim every competitor makes. Magic_Growth_Estimate_EOY2026.md
+
+# --- business audience, added 9 Sep ---
+Three audiences    | fan-facing, artist-facing, business. Countable in the table
+
+# --- three-tier personas, added 9 Sep ---
+Three tiers        | Watching, Taking part, Building. Countable in the table
+One daily          | one Quest per day for the Watching tier. Claude's proposal. NEEDS PRODUCT CONFIRMATION
+one small          | one action for the Watching tier. Existing rule, carried from the six-archetype version
+one Scouting       | phrase match across two table cells. Not a claim
+
+# --- Not covered yet, added 9 Sep ---
+two names          | Magic Guide and Magic Companion for the same persona. Product Glossary and brand platform
+two current        | the Product Glossary and the brand platform. Both current
+two sit            | phrase match on how two marks sit together. Not a claim
+published once     | phrase match. Not a source claim
+Three groups       | Watching, Taking part, Building. Countable in the table
+one they           | phrase match in "which one they are in". Not a claim
+one being          | phrase match in "the fan is the one being asked to act". Not a claim
+4.4                | the book's own version number
+
+# --- arrival note, added 9 Sep ---
+Two different      | how deep in a fandom, and how active in the app. Two axes named in the block
+second one         | phrase match. Not a claim
+one only           | phrase match. Not a claim

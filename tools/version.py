@@ -30,6 +30,20 @@ SOURCE_TAG = "this document's own version"
 
 STAMP = re.compile(r"(Magic Brand Book\s*·\s*version\s+)([0-9.]+)(\s*·\s*)([^.<]+?)(\.\s*Where)")
 
+# The book states its version in a second place, a card near the top of the
+# document. That one drifted to 4.4 while the footer read 4.9, because the
+# original tool only knew about the footer. One number, every place it appears.
+CARD = re.compile(r"(<span>Version\s*<b>)([0-9.]+)(</b></span>)")
+CARD_DATE = re.compile(r"(<span>Updated\s*<b>)([^<]+)(</b></span>)")
+
+
+def short_date(d):
+    """'10 September 2026' -> '10 Sep 2026', matching the card's own style."""
+    parts = d.split()
+    if len(parts) == 3 and len(parts[1]) > 3:
+        parts[1] = parts[1][:3]
+    return " ".join(parts)
+
 
 def read_version():
     fields = {}
@@ -74,8 +88,13 @@ def main():
 
     if arg == "--set":
         new = src[:m.start()] + m.group(1) + want_v + m.group(3) + want_d + m.group(5) + src[m.end():]
+        new, cards = CARD.subn(lambda c: c.group(1) + want_v + c.group(3), new)
+        sd = short_date(want_d)
+        new, dates = CARD_DATE.subn(lambda c: c.group(1) + sd + c.group(3), new)
         open(SRC, "w", encoding="utf8").write(new)
         print(f"  brandbook.html footer set to {want_v} · {want_d}")
+        print(f"  version card(s) set to {want_v}: {cards} found")
+        print(f"  updated date card(s) set to {sd}: {dates} found")
         if set_source_line(want_v):
             print(f"  sources.txt version line set to {want_v}")
         else:
@@ -85,6 +104,14 @@ def main():
         return 0
 
     if arg == "--check":
+        stale = [c.group(2) for c in CARD.finditer(src) if c.group(2) != want_v]
+        stale += [c.group(2) for c in CARD_DATE.finditer(src)
+                  if c.group(2).strip() != short_date(want_d)]
+        if stale:
+            print(f"\n  VERSION says      {want_v}")
+            print(f"  a version card says {', '.join(stale)}")
+            print("\n  Run: python3 tools/version.py --set\n")
+            return 1
         if (got_v, got_d) == (want_v, want_d):
             print(f"  version: {got_v} · {got_d}")
             return 0

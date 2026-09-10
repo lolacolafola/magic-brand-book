@@ -4,8 +4,8 @@
 # "no source, needs adoption" is an honest answer. An empty line is not.
 
 # --- document metadata ---
-4.8                | this document's own version
-9                  | date of this version, 9 September 2026
+4.9                | this document's own version
+10                 | date of this version, 10 September 2026
 2026               | date
 2025               | date of the branding studio's brand platform
 
@@ -168,3 +168,17 @@ one being          | phrase match in "the fan is the one being asked to act". No
 Two different      | how deep in a fandom, and how active in the app. Two axes named in the block
 second one         | phrase match. Not a claim
 one only           | phrase match. Not a claim
+
+# --- social avatar reserves: measured from live company pages, 10 Sep 2026 ---
+0–300              | LinkedIn avatar reserve, measured on nine live LinkedIn company pages including Magic's own, 10 September 2026
+0–420              | X avatar reserve, measured on the live X header layout, 10 September 2026
+300–500            | X avatar reserve, vertical, same measurement
+0–260              | Facebook avatar reserve, measured on the live Facebook page layout, 10 September 2026
+130–315            | Facebook avatar reserve, vertical, same measurement
+130                | part of the Facebook vertical reserve above
+315                | Facebook banner height, published platform specification
+300                | part of the LinkedIn and X reserves above
+420                | part of the X horizontal reserve above
+500                | X banner height, published platform specification
+0                  | left edge of every avatar reserve above. The banner's own origin, countable
+260                | part of the Facebook horizontal reserve above

@@ -7,9 +7,11 @@ Single self-contained page. The only external request is the Outfit webfont.
 
 | File | What it is |
 |---|---|
+| `CLAUDE.md` | What an agent working in this repo must read first. |
 | `brandbook.html` | **The source of truth.** Every change starts here. |
+| `VERSION` | The only place the version number lives. |
 | `index.html` | Generated from `brandbook.html` by the build. Never edited by hand. |
-| `tools/` | The build and the two checks. See `tools/README.md`. |
+| `tools/` | The build and the three checks. See `tools/README.md`. |
 | `.nojekyll` | Stops GitHub trying to process the page as a Jekyll site. |
 
 `brandbook.html` carries no doctype, no `<head>` and no `<body>`. It is also published as a Claude artifact, and that platform adds the wrapper at publish time. `tools/build.py` adds the same wrapper, so the hosted page and the artifact stay identical.

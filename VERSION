@@ -1,5 +1,5 @@
 # The single place the brand book's version lives.
 # tools/version.py --set writes it into brandbook.html. build.py refuses to
 # build if the two disagree. Bump this file, run --set, rebuild.
-version = 4.9
+version = 4.10
 date = 10 September 2026

@@ -4,7 +4,7 @@
 # "no source, needs adoption" is an honest answer. An empty line is not.
 
 # --- document metadata ---
-4.9                | this document's own version
+4.10               | this document's own version
 10                 | date of this version, 10 September 2026
 2026               | date
 2025               | date of the branding studio's brand platform

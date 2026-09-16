@@ -32,7 +32,7 @@ Nothing else will remind you to do this. The footer once read 4.4 across the sou
 | Check | Fails on |
 |---|---|
 | `tools/version.py --check` | The book misstating its own version |
-| `tools/brandlint.py` | Em dashes, negation-contrast, the banned mascot noun, Magic positioned as AI, Magic owning the universe |
+| `tools/brandlint.py` | Errors: em dashes, negation-contrast, and Magic positioned as AI in fan-facing work. Everything else is a warning. `--audience artist` or `business` turns the AI rule into a warning |
 | `tools/claims.py` | Any factual claim with no line in `tools/sources.txt` |
 
 Run them on a draft as well as on the book:
@@ -64,9 +64,12 @@ On the first real job it found nine things across two rounds. The scripts found 
 - No AI cadence. Vary sentence length hard.
 - No literary jargon. Plain words a reader would use themselves.
 - Sentence case everywhere. The tagline is the only thing in full caps.
+- French can be drafted by the team or with Claude. Brand verifies it ahead of publishing.
 <!--/lint-skip-->
 
-**The tagline is LIVE IT. FOR REAL.** It is never rewritten. Both full stops stay. Never an exclamation mark.
+**Two fixed lines.** The tagline is LIVE IT. FOR REAL. The brand line is "Live your passions, for real." Both are used as written, and a rewrite is flagged.
+
+**Three kinds of rule, from book 4.12.** Hard lines block: artist likeness without an agreement, unsourced facts, anything described as live before launch, AI positioning in fan-facing work, em dashes and negation-contrast. Flags are reported and the maker decides. Guidance is not checked.
 
 **Product names:** Magic Companion, Magic Fanverses, Magic Rewards. Never translated into French.
 

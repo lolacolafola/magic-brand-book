@@ -8,6 +8,11 @@ Deterministic. No model judgement involved: a pattern either matches or it does 
     python3 brandlint.py draft.md
     python3 brandlint.py brandbook.html
     cat something.txt | python3 brandlint.py -
+    python3 brandlint.py deck.md --audience artist
+
+--audience fan (default) | artist | business
+  Magic positioned as AI is a hard line in fan-facing work and a warning
+  in artist-facing and business work. Book 4.12, Standing rules.
 
 Exit code 0 = clean, 1 = errors found, 2 = warnings only.
 """
@@ -17,7 +22,8 @@ import sys
 import statistics
 
 # ----------------------------------------------------------------------------
-# ERRORS. Banned outright by the brand book. No exceptions in normal copy.
+# ERRORS. The book's hard lines (4.12): em dashes and negation-contrast.
+# Magic positioned as AI is added at runtime for fan-facing work.
 # ----------------------------------------------------------------------------
 
 ERRORS = [
@@ -53,24 +59,25 @@ ERRORS = [
      r"\bbefore it is\b",
      "Banned construction."),
 
-    ("mascot called a ghost",
-     r"\bghosts?\b",
-     "Never call the character a ghost. It is the Magic mascot until it has a name."),
-
-    ("Magic positioned as AI",
-     r"\bAI[- ](?:powered|driven|first|native|enabled)\b|\bour AI\b|\bAI (?:platform|company|companion|assistant|technology)\b|\bpowered by (?:AI|Magic Brain)\b",
-     "Magic is never positioned as an AI company or platform to fans, artists or their teams. Say what it does."),
-
-    ("Magic owns the universe",
-     r"\b(?:the Magic universe|our universe|join the (?:Magic )?universe|welcome to (?:the|our))\b",
-     "A Fanverse is built for its fans. Write 'your universe', 'your Fanverses'."),
 ]
 
+AI_RULE = ("Magic positioned as AI",
+     r"\bAI[- ](?:powered|driven|first|native|enabled)\b|\bour AI\b|\bAI (?:platform|company|companion|assistant|technology)\b|\bpowered by (?:AI|Magic Brain)\b",
+     "Hard line in fan-facing work: say what it does for the fan. In artist-facing or business work, lead with what the reader gets.")
+
 # ----------------------------------------------------------------------------
-# WARNINGS. Judgement needed, but each one is a known AI cadence.
+# WARNINGS. The book's flags. Judgement needed; each one names a known risk.
 # ----------------------------------------------------------------------------
 
 WARNINGS = [
+    ("mascot called a ghost",
+     r"\bghosts?\b",
+     "Flag. Call the character the mascot. Ignore if the word means something else, like ghosting a message."),
+
+    ("Magic owns the universe",
+     r"\b(?:the Magic universe|our universe|join the (?:Magic )?universe|welcome to (?:the|our))\b",
+     "Flag. A Fanverse is built for its fans. Write 'your universe', 'your Fanverses'."),
+
     ("hedging adverb",
      r"\b(?:genuinely|truly|simply|actually|incredibly|seamlessly|effortlessly|remarkably|undoubtedly)\b",
      "Cut the word. The sentence is stronger without it."),
@@ -190,12 +197,22 @@ def main():
     if len(sys.argv) < 2:
         print(__doc__)
         return 0
-    src = sys.argv[1]
+    args = sys.argv[1:]
+    audience = "fan"
+    if "--audience" in args:
+        i = args.index("--audience")
+        audience = args[i + 1] if i + 1 < len(args) else "fan"
+        del args[i:i + 2]
+    if audience not in ("fan", "artist", "business"):
+        print("--audience must be fan, artist or business")
+        return 1
+    src = args[0]
     raw = sys.stdin.read() if src == "-" else open(src, encoding="utf8").read()
     text = strip_markup(raw)
 
     results = []
     results += check_patterns(text, ERRORS, "ERROR")
+    results += check_patterns(text, [AI_RULE], "ERROR" if audience == "fan" else "WARN")
     results += check_patterns(text, WARNINGS, "WARN")
     results += check_rhythm(text)
     results += check_closers(raw)
@@ -206,7 +223,7 @@ def main():
     errors = [r for r in results if r[0] == "ERROR"]
     others = [r for r in results if r[0] != "ERROR"]
 
-    print(f"\nMagic brand lint: {src}")
+    print(f"\nMagic brand lint: {src} (audience: {audience})")
     print(f"{len(text.split()):,} words checked\n")
 
     if not results:

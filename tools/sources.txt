@@ -4,8 +4,8 @@
 # "no source, needs adoption" is an honest answer. An empty line is not.
 
 # --- document metadata ---
-4.12               | this document's own version
-16                 | date of this version, 16 September 2026
+4.14               | this document's own version
+12                 | date of this version, 12 October 2026
 2026               | date
 2025               | date of the branding studio's brand platform
 
@@ -61,6 +61,15 @@ One colour         | one colour leads. External reference. NEEDS MAGIC ADOPTION
 One decision       | the ground is chosen first. Follows from the proportions
 One accent         | follows from the proportions
 one surface        | follows from the proportions
+
+# --- Magic Product Glossary, version 1.2, October 2026 ---
+1.2                | version of the Magic Product Glossary the Lexicon is synced to
+one missed         | Streak Shield covers one missed day. Product Glossary 1.2, section 5
+two forms          | Talent Faves and Fan Faves. Product Glossary 1.2, section 3
+three brand        | Magic Companion, Magic Fanverses, Magic Rewards. The September 2026 brand platform
+from the brand platform | the September 2026 brand platform names Companion, Fanverses, Rewards
+two roles          | Companion and Magic Guide, defined separately. Product Glossary 1.2, section 2a
+from the product glossary, version 1 | the retired vocabulary table, Product Glossary 1.2, section 9
 
 # --- written by Claude, no external source. ADOPTION NEEDED ---
 twelve and         | "every sentence between twelve and eighteen words" as an AI tell. Claude's observation, not measured

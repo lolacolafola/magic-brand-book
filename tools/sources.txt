@@ -4,7 +4,7 @@
 # "no source, needs adoption" is an honest answer. An empty line is not.
 
 # --- document metadata ---
-4.15               | this document's own version
+4.16               | this document's own version
 14                 | date of this version, 14 October 2026
 US follows         | Laura's ruling, 13 Oct 2026: France launches first, the US follows
 2026               | date
@@ -46,6 +46,7 @@ two audiences      | fan-facing and artist-facing. The brand platform addresses 
 one brand          | structural
 two full           | LIVE IT. FOR REAL. has two full stops. Countable
 two complete       | follows from the punctuation
+two senses         | finally, and off the screen. Both named in the FOR REAL section
 One exception      | the vision statement. Named in the book
 four pages         | the FR brand platform sets the tagline across four pages. Verifiable in that deck
 four different     | four French renderings of the vision line in that deck. Verifiable
